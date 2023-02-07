@@ -23,11 +23,16 @@ export default function App() {
       edited: false,
     },
   ])
+  
+  const addTodo = (todo) => {
+    setTask(prev => [...prev, todo])
+  }
 
   return (
     <div className="App">
       <Title />
-      <TodoEnter task={task} setTask={setTask}/>
+    //TodoInput
+      <TodoEnter setTask={addTodo}/>
       <TodoList task={task} setTask={setTask}/>
     </div>
   );

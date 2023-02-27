@@ -1,5 +1,5 @@
-import Button from '../UI/button/Button.jsx';
-import Input from '../UI/input/Input.jsx';
+import Button from '../../UI/button/Button.jsx';
+import Input from '../../UI/input/Input.jsx';
 import style from './TodoItem.module.css';
 
 export default function TodoItem({callback, title, id}) {

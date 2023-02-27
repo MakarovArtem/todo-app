@@ -1,4 +1,4 @@
-import Button from '../UI/button/Button.jsx';
+import Button from '../../UI/button/Button.jsx';
 
 import style from './TodoItem.module.css';
 

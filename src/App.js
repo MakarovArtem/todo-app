@@ -1,8 +1,8 @@
-import Title from './components/Title/Title';
-import TodoInput from './components/TodoInput/TodoInput';
-import TodoList from './components/TodoList/TodoList';
-import TodoSort from './components/UI/select/Select.jsx';
 import {useState} from 'react';
+import Title from './page/Title/Title';
+import TodoInput from './page/TodoInput/TodoInput';
+import TodoList from './page/TodoList/TodoList';
+import TodoSort from './UI/select/Select.jsx';
 
 import './index.css';
 
@@ -52,11 +52,6 @@ export default function App() {
   function sortTasks(sort) {
     setSortType(sort);
     setTasks([...tasks].sort((a, b) => a[sort].localeCompare(b[sort])));
-    // if(optionsName === 'Title A -> Z') {
-    //   setTasks([...tasks].sort((a, b) => a[sort].localeCompare(b[sort])));
-    // } else if(optionsName === 'Title Z -> A') {
-    //   setTasks([...tasks].sort((a, b) => b[sort].localeCompare(a[sort])));
-    // }
   }
 
   return (

@@ -1,6 +1,6 @@
-import useInput  from '../hooks/useInput.js';
-import Button from '../UI/button/Button.jsx';
-import Input from '../UI/input/Input.jsx';
+import useInput  from '../../hooks/useInput.js';
+import Button from '../../UI/button/Button.jsx';
+import Input from '../../UI/input/Input.jsx';
 
 export default function TodoEnter({callback}){
 

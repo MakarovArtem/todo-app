@@ -27,7 +27,13 @@ export default function App() {
 
   let callback = {
     
-    createTodo (newTodo) {
+    createTodo (title) {
+      let newTodo = {
+        id: crypto.randomUUID(),
+        title: title,
+        completed: false,
+        edited: false,
+      };
       setTasks((prev) => [...prev, newTodo]);
     },
   

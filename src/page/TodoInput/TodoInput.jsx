@@ -4,19 +4,12 @@ import Input from '../../UI/input/Input.jsx';
 
 export default function TodoEnter({callback}){
 
-  const input = useInput('');
+  const {value, onChange, setValue} = useInput('');
 
   function addTask() {
-    if(input.value) {
-      let newTodo = {
-        id: crypto.randomUUID(),
-        title: input.value,
-        completed: false,
-        edited: false,
-      };
-      
-      callback.createTodo(newTodo);
-      input.setValue(() => '');
+    if(value) {
+      callback.createTodo(value);
+      setValue(() => '');
     } else {
       alert('Enter the task!')
     }
@@ -33,7 +26,7 @@ export default function TodoEnter({callback}){
         alignItems: 'center',
       }
     }>
-      <Input type="text" value={input.value} onChange={input.onChange} placeholder='Enter your task here'/>
+      <Input type="text" value={value} onChange={onChange} placeholder='Enter your task here'/>
       <Button onClick={addTask}>Add task</Button>
     </article>
   )
